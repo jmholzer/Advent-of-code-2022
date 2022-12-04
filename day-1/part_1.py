@@ -5,7 +5,7 @@ class Solution:
     def __init__(self, input_file_path: str) -> None:
         self._input = _read_input(input_file_path)
 
-    def solve(self):
+    def solve(self) -> int:
         result = -float("inf")
         calories = 0
         for line in self._input:
