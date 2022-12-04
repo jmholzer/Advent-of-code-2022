@@ -1,0 +1,32 @@
+from typing import List
+
+
+class Solution:
+    def __init__(self, input_file_path: str) -> None:
+        self._input = _read_input(input_file_path)
+
+    def solve(self) -> int:
+        result = 0
+        for range_1, range_2 in self._input:
+            if self._contains(range_1, range_2):
+                result += 1
+        return result
+
+    @staticmethod
+    def _contains(range_1, range_2):
+        if range_1[0] >= range_2[0] and range_1[1] <= range_2[1]:
+            return True
+        elif range_2[0] >= range_1[0] and range_2[1] <= range_1[1]:
+            return True
+        return False
+
+
+def _read_input(input_file_path: str) -> List[str]:
+    with open(input_file_path, "r") as input_file:
+        for line in input_file:
+            yield [list(map(int, r.split("-"))) for r in line.strip().split(",")]
+
+
+if __name__ == "__main__":
+    solution = Solution("input")
+    print(solution.solve())
