@@ -21,6 +21,7 @@ class Solution:
         else:
             return ord(item) - ord("A") + 27
 
+
 def _read_input(input_file_path: str) -> List[str]:
     with open(input_file_path, "r") as input_file:
         for line in input_file:
