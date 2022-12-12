@@ -76,12 +76,8 @@ class Solution:
 
 
 class FSTreeNode:
-
     def __init__(
-            self,
-            name: str,
-            size: Optional[int] = 0,
-            parent: Optional[FSTreeNode] = None
+        self, name: str, size: Optional[int] = 0, parent: Optional[FSTreeNode] = None
     ) -> None:
         self.name = name
         self.size = size

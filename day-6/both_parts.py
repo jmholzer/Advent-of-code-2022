@@ -20,9 +20,11 @@ class Solution:
             if len(count) == message_length:
                 return r + 1
 
+
 def _read_input(input_file_path: str) -> str:
     with open(input_file_path, "r") as input_file:
         return input_file.read().strip()
+
 
 if __name__ == "__main__":
     solution = Solution("input")
